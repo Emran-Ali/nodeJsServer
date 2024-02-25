@@ -1,6 +1,9 @@
-const a = 5;
-console.log(__dirname);
+const fs = require('fs');
 
-module.exports = {
-    a,
-};
+fs.readFile('./test.txt', (err, data) => {
+    if (err) {
+        throw err;
+    } else {
+        console.log(data.toString());
+    }
+});
